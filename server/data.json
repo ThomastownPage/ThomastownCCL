@@ -1,19 +1,6 @@
 {
   "concerts": [
     {
-      "title": "asd",
-      "artist": "asdasd",
-      "date": "asd",
-      "time": "asd",
-      "price": "asd",
-      "image": "",
-      "description": "",
-      "isPast": false,
-      "eventType": "Play",
-      "flyers": [],
-      "id": "1779101310953"
-    },
-    {
       "title": "Music in Kilkenny",
       "artist": "",
       "date": "January - May, 2026",

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { Menu, X, Lock } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ThemeSwitch from "./ThemeSwitch";
 const navLinks = [
@@ -48,17 +48,9 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/admin"
-              className="ml-2 flex items-center gap-1 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-all duration-200 text-sm"
-              title="Admin Panel"
-            >
-              <Lock className="w-4 h-4" />
-              Admin
-            </Link>
-            <div className="ml-3 pl-3 border-l border-gray-200">
+            {/* <div className="ml-3 pl-3 border-l border-gray-200">
               <ThemeSwitch />
-            </div>
+            </div> */}
           </nav>
 
           <div className="flex items-center gap-3 lg:hidden">
@@ -95,14 +87,6 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/admin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-all duration-200"
-            >
-              <Lock className="w-4 h-4" />
-              Admin
-            </Link>
           </nav>
         </div>
       )}
