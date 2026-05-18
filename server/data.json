@@ -10,7 +10,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842557404-876625.jpg"
+        "/images/flyers/musicInKilkenny2026.jpg"
       ],
       "id": "1778842559558"
     },
@@ -24,7 +24,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842527278-952611.png"
+        "/images/flyers/Weir.png"
       ],
       "id": "1778842528705"
     },
@@ -38,7 +38,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842490891-340647.webp"
+        "/images/flyers/the forgotten voices of workhouse women.webp"
       ],
       "id": "1778842492158"
     },
@@ -52,7 +52,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842443859-881649.jpg"
+        "/images/flyers/music in kilkenny 2025 .jpg"
       ],
       "id": "1778842446577"
     },
@@ -66,7 +66,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842409701-972600.png"
+        "/images/flyers/robin hood.png"
       ],
       "id": "1778842411442"
     },
@@ -80,7 +80,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842595483-317617.jpg"
+        "/images/flyers/TCAF25.jpg"
       ],
       "id": "1778842596020"
     },
@@ -94,7 +94,7 @@
       "description": "Internationally acclaimed pianist performs works by Chopin, Debussy, and more.",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842374282-749545.jpg"
+        "/images/flyers/the mcgowan trilogy.jpg"
       ],
       "id": "2"
     },
@@ -108,7 +108,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842325820-349708.jpg"
+        "/images/flyers/cinderella.jpg"
       ],
       "id": "3"
     },
@@ -122,7 +122,7 @@
       "description": "",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842288779-283866.jpg"
+        "/images/flyers/DA .jpg"
       ],
       "id": "4"
     },
@@ -136,7 +136,7 @@
       "description": "An enchanting winter concert with festive music.",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842255945-77366.jpg"
+        "/images/flyers/Moll.jpg"
       ],
       "id": "5"
     },
@@ -150,7 +150,7 @@
       "description": "A harvest celebration with music, food, and community spirit.",
       "isPast": true,
       "flyers": [
-        "/uploads/1778842214566-564948.jpg"
+        "/images/flyers/the kings kilburn .jpg"
       ],
       "id": "6"
     }
@@ -180,7 +180,7 @@
       "title": "Our New Website",
       "date": "May, 21, 2026",
       "category": "Events",
-      "image": "/uploads/1778843275744-953401.jpg",
+      "image": "/images/our-new-website.jpg",
       "excerpt": "We are excited to launch our new website, created with the help of students from Slovakia: Theo Štovčik and Radii Yevstratov. The website is designed to make it easier for the community to explore our history, facilities, events, and latest news.",
       "id": "1778843282717"
     }
