@@ -50,6 +50,11 @@ const rooms = [
       "A dedicated fitness space supporting training, conditioning, and water sports development for all levels.",
     capacity: "Up to 30 people",
     features: ["Cardio equipment", "Strength machines", "Changing rooms"],
+    photos: [
+      "/images/rooms/gym/1000064796.jpg",
+      "/images/rooms/gym/1000064797.jpg",
+      "/images/rooms/gym/1000064798.jpg",
+    ],
   },
   {
     name: "Sports Courts",

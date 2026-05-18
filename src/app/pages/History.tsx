@@ -160,7 +160,26 @@ export default function History() {
               </p>
             </div>
             <div className="h-full">
-              <ImagePlaceholder label="Photo: Opening Ceremony / Original Hall Building" height="h-full" />
+              <Carousel className="w-full h-full" opts={{ loop: true }}>
+                <CarouselContent>
+                  <CarouselItem>
+                    <img
+                      src="/images/history/1000005842.jpg"
+                      alt="Building the Hall — original construction"
+                      className="w-full h-full object-cover rounded-xl shadow"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src="/images/history/1000005843.jpg"
+                      alt="Building the Hall — original construction"
+                      className="w-full h-full object-cover rounded-xl shadow"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
             </div>
           </div>
         </div>
