@@ -1,13 +1,13 @@
-/* ── Blue Theme (default) ─────────────────────────────── */
+/* ── Orange Theme (default) ───────────────────────────── */
 :root {
-  --brand:        #19668c;
-  --brand-hover:  #14567a;
-  --brand-light:  #dbeef5;
-  --brand-lighter:#eef7fb;
-  --brand-dark:   #0f4060;
-  --brand-mid:    #4a9ec1;
-  --brand-soft:   #7bbdd4;
-  --brand-border: #b8d9e8;
+  --brand:        #d97706;
+  --brand-hover:  #b45309;
+  --brand-light:  #fef3c7;
+  --brand-lighter:#fffbeb;
+  --brand-dark:   #92400e;
+  --brand-mid:    #fbbf24;
+  --brand-soft:   #fcd34d;
+  --brand-border: #fde68a;
 }
 
 /* ── Orange Theme ─────────────────────────────────────── */

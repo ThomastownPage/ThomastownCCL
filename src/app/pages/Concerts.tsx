@@ -82,10 +82,12 @@ export default function Concerts() {
                         <Clock className="w-5 h-5 mr-2 text-[var(--brand)]" />
                         {concert.time}
                       </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-5 h-5 mr-2 text-[var(--brand)]" />
-                        Main Concert Hall
-                      </div>
+                      {concert.address && (
+                        <div className="flex items-center">
+                          <MapPin className="w-5 h-5 mr-2 text-[var(--brand)]" />
+                          {concert.address}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

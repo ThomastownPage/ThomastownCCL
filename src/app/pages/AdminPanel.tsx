@@ -196,7 +196,7 @@ export default function AdminPanel() {
   };
 
   const emptyConcert: Omit<Concert, "id"> = {
-    title: "", artist: "", date: "", time: "", price: "", image: "", description: "", isPast: false, eventType: "Concert", flyers: [],
+    title: "", artist: "", date: "", time: "", price: "", image: "", description: "", isPast: false, eventType: "Concert", flyers: [], address: "",
   };
   const emptyNews: Omit<NewsArticle, "id"> = {
     title: "", date: "", category: "Programs", image: "", excerpt: "",
@@ -314,6 +314,10 @@ export default function AdminPanel() {
                   <div>
                     <label className={labelCls}>Start Time</label>
                     <input className={inputCls} value={cForm.time} onChange={(e) => setCForm({ ...cForm, time: e.target.value })} placeholder="e.g. 8:00 PM" />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className={labelCls}>Address / Venue</label>
+                    <input className={inputCls} value={cForm.address ?? ""} onChange={(e) => setCForm({ ...cForm, address: e.target.value })} placeholder="e.g. Thomastown Community Centre, Low Street" />
                   </div>
                   <div>
                     <label className={labelCls}>Ticket Price</label>

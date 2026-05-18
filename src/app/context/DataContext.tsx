@@ -14,6 +14,7 @@ export interface Concert {
   isPast: boolean;
   eventType?: string;
   flyers?: string[];
+  address?: string;
 }
 
 export interface Event {
