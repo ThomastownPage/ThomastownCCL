@@ -16,7 +16,7 @@ import {
   ChevronUp,
   ChevronDown,
 } from "lucide-react";
-import { useAuth } from "../context/AuthContext";
+import { useAuth, getAuthHeader } from "../context/AuthContext";
 import { useData } from "../context/DataContext";
 import type { Concert, Event, NewsArticle } from "../context/DataContext";
 
@@ -32,7 +32,7 @@ function moveItem<T>(arr: T[], from: number, to: number): T[] {
 async function uploadFile(file: File): Promise<string> {
   const fd = new FormData();
   fd.append("file", file);
-  const res = await fetch("/api/upload", { method: "POST", body: fd });
+  const res = await fetch("/api/upload", { method: "POST", headers: getAuthHeader(), body: fd });
   if (!res.ok) throw new Error("Upload failed");
   const { url } = await res.json();
   return url;

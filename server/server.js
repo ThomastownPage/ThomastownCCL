@@ -17,7 +17,10 @@ const ADMIN_USER = process.env.ADMIN_USER || 'admin';
 const ADMIN_PASS = process.env.ADMIN_PASS || 'admin123';
 const CORS_ORIGIN = process.env.CORS_ORIGIN || '*';
 
-const sessions = new Set();
+const SECRET = crypto.createHash('sha256').update(`${ADMIN_USER}:${ADMIN_PASS}`).digest('hex');
+function generateToken() {
+  return crypto.createHmac('sha256', SECRET).update(ADMIN_USER).digest('hex');
+}
 
 mkdirSync(UPLOADS_DIR, { recursive: true });
 
@@ -38,7 +41,7 @@ app.use('/uploads', express.static(UPLOADS_DIR));
 function requireAuth(req, res, next) {
   const auth = req.headers.authorization;
   if (!auth || !auth.startsWith('Bearer ')) return res.status(401).json({ error: 'Unauthorized' });
-  if (!sessions.has(auth.slice(7))) return res.status(401).json({ error: 'Unauthorized' });
+  if (auth.slice(7) !== generateToken()) return res.status(401).json({ error: 'Unauthorized' });
   next();
 }
 
@@ -46,17 +49,13 @@ function requireAuth(req, res, next) {
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
   if (username === ADMIN_USER && password === ADMIN_PASS) {
-    const token = crypto.randomUUID();
-    sessions.add(token);
-    res.json({ token });
+    res.json({ token: generateToken() });
   } else {
     res.status(401).json({ error: 'Invalid credentials' });
   }
 });
 
-app.post('/api/logout', (req, res) => {
-  const auth = req.headers.authorization;
-  if (auth && auth.startsWith('Bearer ')) sessions.delete(auth.slice(7));
+app.post('/api/logout', (_req, res) => {
   res.json({ ok: true });
 });
 

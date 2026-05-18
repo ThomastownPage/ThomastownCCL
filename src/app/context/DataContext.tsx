@@ -56,6 +56,15 @@ const DataContext = createContext<DataContextType | null>(null);
 const authJson = () => ({ "Content-Type": "application/json", ...getAuthHeader() });
 const authOnly = () => ({ ...getAuthHeader() });
 
+function authFetch(url: string, init: RequestInit): void {
+  fetch(url, init).then((r) => {
+    if (r.status === 401) {
+      localStorage.removeItem("cc_admin_token");
+      window.location.assign("/admin/login");
+    }
+  }).catch(() => {});
+}
+
 export function DataProvider({ children }: { children: ReactNode }) {
   const [concerts, setConcerts] = useState<Concert[]>([]);
   const [events, setEvents] = useState<Event[]>([]);
@@ -70,56 +79,56 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const addConcert = (c: Omit<Concert, "id">) => {
     const item: Concert = { ...c, id: Date.now().toString() };
     setConcerts((prev) => [item, ...prev]);
-    fetch("/api/concerts", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
+    authFetch("/api/concerts", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
   };
   const updateConcert = (c: Concert) => {
     setConcerts((prev) => prev.map((x) => (x.id === c.id ? c : x)));
-    fetch(`/api/concerts/${c.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(c) });
+    authFetch(`/api/concerts/${c.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(c) });
   };
   const deleteConcert = (id: string) => {
     setConcerts((prev) => prev.filter((x) => x.id !== id));
-    fetch(`/api/concerts/${id}`, { method: "DELETE", headers: authOnly() });
+    authFetch(`/api/concerts/${id}`, { method: "DELETE", headers: authOnly() });
   };
 
   const addEvent = (e: Omit<Event, "id">) => {
     const item: Event = { ...e, id: Date.now().toString() };
     setEvents((prev) => [item, ...prev]);
-    fetch("/api/events", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
+    authFetch("/api/events", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
   };
   const updateEvent = (e: Event) => {
     setEvents((prev) => prev.map((x) => (x.id === e.id ? e : x)));
-    fetch(`/api/events/${e.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(e) });
+    authFetch(`/api/events/${e.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(e) });
   };
   const deleteEvent = (id: string) => {
     setEvents((prev) => prev.filter((x) => x.id !== id));
-    fetch(`/api/events/${id}`, { method: "DELETE", headers: authOnly() });
+    authFetch(`/api/events/${id}`, { method: "DELETE", headers: authOnly() });
   };
 
   const addNews = (n: Omit<NewsArticle, "id">) => {
     const item: NewsArticle = { ...n, id: Date.now().toString() };
     setNews((prev) => [item, ...prev]);
-    fetch("/api/news", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
+    authFetch("/api/news", { method: "POST", headers: authJson(), body: JSON.stringify(item) });
   };
   const updateNews = (n: NewsArticle) => {
     setNews((prev) => prev.map((x) => (x.id === n.id ? n : x)));
-    fetch(`/api/news/${n.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(n) });
+    authFetch(`/api/news/${n.id}`, { method: "PUT", headers: authJson(), body: JSON.stringify(n) });
   };
   const deleteNews = (id: string) => {
     setNews((prev) => prev.filter((x) => x.id !== id));
-    fetch(`/api/news/${id}`, { method: "DELETE", headers: authOnly() });
+    authFetch(`/api/news/${id}`, { method: "DELETE", headers: authOnly() });
   };
 
   const reorderConcerts = (arr: Concert[]) => {
     setConcerts(arr);
-    fetch("/api/concerts", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
+    authFetch("/api/concerts", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
   };
   const reorderEvents = (arr: Event[]) => {
     setEvents(arr);
-    fetch("/api/events", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
+    authFetch("/api/events", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
   };
   const reorderNews = (arr: NewsArticle[]) => {
     setNews(arr);
-    fetch("/api/news", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
+    authFetch("/api/news", { method: "PUT", headers: authJson(), body: JSON.stringify(arr) });
   };
 
   return (
