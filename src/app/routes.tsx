@@ -1,14 +1,16 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import History from "./pages/History";
-import Concerts from "./pages/Concerts";
-import Facilities from "./pages/Facilities";
-import News from "./pages/News";
-import Contact from "./pages/Contact";
-import TidyTowns from "./pages/TidyTowns";
-import AdminLogin from "./pages/AdminLogin";
-import AdminPanel from "./pages/AdminPanel";
+
+const Home = lazy(() => import("./pages/Home"));
+const History = lazy(() => import("./pages/History"));
+const Concerts = lazy(() => import("./pages/Concerts"));
+const Facilities = lazy(() => import("./pages/Facilities"));
+const News = lazy(() => import("./pages/News"));
+const Contact = lazy(() => import("./pages/Contact"));
+const TidyTowns = lazy(() => import("./pages/TidyTowns"));
+const AdminLogin = lazy(() => import("./pages/AdminLogin"));
+const AdminPanel = lazy(() => import("./pages/AdminPanel"));
 
 export const router = createBrowserRouter([
   {

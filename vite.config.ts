@@ -18,6 +18,25 @@ function figmaAssetResolver() {
 
 export default defineConfig({
   publicDir: 'src/public',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router'],
+          'ui-radix': [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-tooltip',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-select',
+          ],
+          'slick': ['react-slick', 'slick-carousel'],
+          'carousel': ['embla-carousel-react'],
+        },
+      },
+    },
+  },
   server: {
     proxy: {
       '/api': 'http://localhost:3001',

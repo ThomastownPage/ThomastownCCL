@@ -160,6 +160,8 @@ export default function Facilities() {
                             src={src}
                             alt={`${room.name} photo ${i + 1}`}
                             className="w-full h-80 object-cover"
+                            loading="lazy"
+                            decoding="async"
                             style={(room as any).contrast ? { filter: `contrast(${(room as any).contrast}%)` } : undefined}
                           />
                         </CarouselItem>

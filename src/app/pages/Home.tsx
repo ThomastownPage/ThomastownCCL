@@ -67,6 +67,7 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
+    pauseOnHover: false,
     fade: true,
   };
 
@@ -81,6 +82,9 @@ export default function Home() {
                   src={image.url}
                   alt={image.title}
                   className="w-full h-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent flex items-center">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

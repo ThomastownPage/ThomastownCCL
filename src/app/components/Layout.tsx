@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -17,7 +17,9 @@ export default function Layout() {
       <ScrollToTop />
       <Header />
       <main className="flex-1">
-        <Outlet />
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>

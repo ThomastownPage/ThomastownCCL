@@ -6,8 +6,8 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const IMAGES_DIR = path.join(__dirname, "..", "src", "public", "images");
 
-const MAX_DIMENSION = 1920;
-const JPEG_QUALITY = 82;
+const MAX_DIMENSION = 1600;
+const JPEG_QUALITY = 72;
 const PNG_COMPRESSION = 9;
 
 async function walk(dir) {
@@ -66,7 +66,7 @@ async function optimize(filePath) {
       buf = await pipeline.webp({ quality: 82 }).toBuffer();
     }
 
-    if (buf && buf.length < before) {
+    if (buf) {
       await writeFile(filePath, buf);
       return { before, after: buf.length };
     }

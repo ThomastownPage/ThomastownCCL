@@ -88,6 +88,8 @@ export default function History() {
                 src="/images/playground/enterance.jpg"
                 alt="Community Centre entrance"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -103,6 +105,8 @@ export default function History() {
                 src="/images/history/lady.jpg"
                 alt="Lady Kathleen Lyndsey — Founding Meeting"
                 className="w-full h-auto rounded-xl shadow"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="order-1 lg:order-2">
@@ -167,6 +171,8 @@ export default function History() {
                       src="/images/history/1000005842.jpg"
                       alt="Building the Hall — original construction"
                       className="w-full h-full object-cover rounded-xl shadow"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </CarouselItem>
                   <CarouselItem>
@@ -174,6 +180,8 @@ export default function History() {
                       src="/images/history/1000005843.jpg"
                       alt="Building the Hall — original construction"
                       className="w-full h-full object-cover rounded-xl shadow"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </CarouselItem>
                 </CarouselContent>
@@ -197,6 +205,8 @@ export default function History() {
                       src="/images/history/oldCinema.jpg"
                       alt="Old Cinema — 1930s–1940s"
                       className="w-full h-full object-cover rounded-xl shadow"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </CarouselItem>
                   <CarouselItem>
@@ -204,6 +214,8 @@ export default function History() {
                       src="/images/history/construction.jpg"
                       alt="Construction era"
                       className="w-full h-full object-cover rounded-xl shadow"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </CarouselItem>
                 </CarouselContent>
@@ -273,6 +285,8 @@ export default function History() {
                 src="/images/history/goldTicket.png"
                 alt="Golden Ticket — Reclaiming the Hall"
                 className="w-full h-80 object-cover rounded-xl shadow"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -288,6 +302,8 @@ export default function History() {
                 src="/images/history/building1979.jpg"
                 alt="New Community Centre — Opening 1979"
                 className="w-full h-116 object-cover rounded-xl shadow"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="order-1 lg:order-2">
@@ -339,6 +355,8 @@ export default function History() {
                       src={(slide as any).src}
                       alt={slide.label}
                       className={`${(slide as any).heightClass ?? "h-72 w-full object-cover"} rounded-xl`}
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="h-72 w-full rounded-xl bg-[var(--brand-lighter)] border-2 border-dashed border-[var(--brand-border)] flex flex-col items-center justify-center gap-3">

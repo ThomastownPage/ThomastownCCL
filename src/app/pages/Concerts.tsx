@@ -58,6 +58,8 @@ export default function Concerts() {
                       src={concert.image}
                       alt={concert.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="md:col-span-2 p-8">
@@ -123,6 +125,8 @@ export default function Concerts() {
                               src={flyer}
                               alt={`Flyer ${i + 1}`}
                               className="w-full h-28 object-cover hover:scale-105 transition-transform duration-200"
+                              loading="lazy"
+                              decoding="async"
                             />
                             {i === 3 && flyers.length > 4 && (
                               <div className="absolute inset-0 bg-black/60 flex items-center justify-center">

@@ -130,6 +130,8 @@ function GalleryCarousel({ photos, delayMs }: { photos: string[]; delayMs: numbe
         className={`w-full h-full object-cover transition-opacity duration-700 ${
           visible ? "opacity-100" : "opacity-0"
         }`}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
@@ -203,6 +205,8 @@ export default function TidyTowns() {
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxpcmlzaCUyMHRvd24lMjBncmVlbiUyMGNvbW11bml0eXxlbnwxfHx8fDE3Nzg2NzIxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Thomastown community"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -302,6 +306,8 @@ export default function TidyTowns() {
                 src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2xsaW5hdG9yJTIwZmxvd2VycyUyMGdhcmRlbnxlbnwxfHx8fDE3Nzg2NzIxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Biodiversity and nature"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -317,6 +323,8 @@ export default function TidyTowns() {
                 src="/images/tidyTown/thomastown.jpg"
                 alt="Thomastown heritage"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="order-1 lg:order-2">
