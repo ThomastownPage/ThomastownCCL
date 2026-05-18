@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import crypto from 'crypto';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join, extname } from 'path';
 import multer from 'multer';
@@ -69,6 +70,19 @@ function readData() {
 
 function writeData(data) {
   writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  scheduleAutoCommit();
+}
+
+let autoCommitTimer = null;
+function scheduleAutoCommit() {
+  if (autoCommitTimer) clearTimeout(autoCommitTimer);
+  autoCommitTimer = setTimeout(() => {
+    const repoRoot = join(__dirname, '..');
+    exec('git add server/data.json && git commit -m "Auto-save: data updated" && git push', { cwd: repoRoot }, (err, stdout, stderr) => {
+      if (err) { console.error('[auto-commit] failed:', stderr || err.message); }
+      else { console.log('[auto-commit] data.json saved to git'); }
+    });
+  }, 2000);
 }
 
 // ── File Upload ──────────────────────────────────────────────────────────────
