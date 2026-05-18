@@ -1,0 +1,52 @@
+/* ── Blue Theme (default) ─────────────────────────────── */
+:root {
+  --brand:        #19668c;
+  --brand-hover:  #14567a;
+  --brand-light:  #dbeef5;
+  --brand-lighter:#eef7fb;
+  --brand-dark:   #0f4060;
+  --brand-mid:    #4a9ec1;
+  --brand-soft:   #7bbdd4;
+  --brand-border: #b8d9e8;
+}
+
+/* ── Orange Theme ─────────────────────────────────────── */
+html.theme-orange {
+  --brand:        #d97706;
+  --brand-hover:  #b45309;
+  --brand-light:  #fef3c7;
+  --brand-lighter:#fffbeb;
+  --brand-dark:   #92400e;
+  --brand-mid:    #fbbf24;
+  --brand-soft:   #fcd34d;
+  --brand-border: #fde68a;
+}
+
+/* ── Green (Combo) Theme ──────────────────────────────── */
+html.theme-green {
+  --brand:        #15803d;
+  --brand-hover:  #166534;
+  --brand-light:  #dcfce7;
+  --brand-lighter:#f0fdf4;
+  --brand-dark:   #14532d;
+  --brand-mid:    #22c55e;
+  --brand-soft:   #86efac;
+  --brand-border: #bbf7d0;
+}
+
+/* ── Gradient (Blue + Orange) Theme ──────────────────── */
+html.theme-gradient {
+  --brand:        #19668c;
+  --brand-hover:  #b45309;
+  --brand-light:  #fef3e8;
+  --brand-lighter:#fff8f0;
+  --brand-dark:   #0f4060;
+  --brand-mid:    #d97706;
+  --brand-soft:   #f0a050;
+  --brand-border: #f5d0a0;
+}
+
+/* Apply blue→orange gradient to all primary brand backgrounds */
+html.theme-gradient .bg-\[var\(--brand\)\] {
+  background-image: linear-gradient(135deg, #19668c 0%, #d97706 100%);
+}

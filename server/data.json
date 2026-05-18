@@ -1,0 +1,188 @@
+{
+  "concerts": [
+    {
+      "title": "Music in Kilkenny",
+      "artist": "",
+      "date": "January - May, 2026",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842557404-876625.jpg"
+      ],
+      "id": "1778842559558"
+    },
+    {
+      "title": "The Weir",
+      "artist": "",
+      "date": "March, 12 - 14 & 19 - 21, 2026",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842527278-952611.png"
+      ],
+      "id": "1778842528705"
+    },
+    {
+      "title": "The Forgotten Voices of Worrkhouse Women",
+      "artist": "",
+      "date": "February, 6, 2026",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842490891-340647.webp"
+      ],
+      "id": "1778842492158"
+    },
+    {
+      "title": "Music in Kilkenny",
+      "artist": "",
+      "date": "September - December, 2025",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842443859-881649.jpg"
+      ],
+      "id": "1778842446577"
+    },
+    {
+      "title": "Robin Hood",
+      "artist": "",
+      "date": "November, 13 - 16, 2025",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842409701-972600.png"
+      ],
+      "id": "1778842411442"
+    },
+    {
+      "title": "TCAF25",
+      "artist": "",
+      "date": "August, 08 - 17, 2025",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842595483-317617.jpg"
+      ],
+      "id": "1778842596020"
+    },
+    {
+      "title": "The McGowan Trilogy",
+      "artist": "",
+      "date": "May, 15 - 17, 2025",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "Internationally acclaimed pianist performs works by Chopin, Debussy, and more.",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842374282-749545.jpg"
+      ],
+      "id": "2"
+    },
+    {
+      "title": "Cinderella",
+      "artist": "",
+      "date": "November 14-17, 2024",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842325820-349708.jpg"
+      ],
+      "id": "3"
+    },
+    {
+      "title": "Da",
+      "artist": "",
+      "date": "March, 14 - 23, 2024",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842288779-283866.jpg"
+      ],
+      "id": "4"
+    },
+    {
+      "title": "Moll",
+      "artist": "",
+      "date": "March, 23 - 31, 2023",
+      "time": "7:00 PM",
+      "price": "",
+      "image": "",
+      "description": "An enchanting winter concert with festive music.",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842255945-77366.jpg"
+      ],
+      "id": "5"
+    },
+    {
+      "title": "The Kings of the Kilburn",
+      "artist": "",
+      "date": "March, 17 - 26, 2022",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "A harvest celebration with music, food, and community spirit.",
+      "isPast": true,
+      "flyers": [
+        "/uploads/1778842214566-564948.jpg"
+      ],
+      "id": "6"
+    }
+  ],
+  "events": [
+    {
+      "title": "cOFFE",
+      "date": "May 20, 2026",
+      "type": "Event",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Community Heritage Day",
+      "date": "June 5, 2026",
+      "type": "Event"
+    },
+    {
+      "id": "3",
+      "title": "Summer Arts Festival",
+      "date": "July 15-17, 2026",
+      "type": "Festival"
+    }
+  ],
+  "news": [
+    {
+      "title": "Our New Website",
+      "date": "May, 21, 2026",
+      "category": "Events",
+      "image": "/uploads/1778843275744-953401.jpg",
+      "excerpt": "We are excited to launch our new website, created with the help of students from Slovakia: Theo Štovčik and Radii Yevstratov. The website is designed to make it easier for the community to explore our history, facilities, events, and latest news.",
+      "id": "1778843282717"
+    }
+  ]
+}
