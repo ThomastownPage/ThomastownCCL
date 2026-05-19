@@ -93,7 +93,7 @@ const galleryData = [
   ["/images/tidyTown/1000064458.jpg", "/images/tidyTown/1000064459.jpg", "/images/tidyTown/1000064461.jpg"],
   ["/images/tidyTown/1000064463.jpg", "/images/tidyTown/1000064464.jpg", "/images/tidyTown/1000064465.jpg"],
   ["/images/tidyTown/1000064466.jpg", "/images/tidyTown/1000064468.jpg", "/images/tidyTown/1000064470.jpg"],
-  ["/images/tidyTown/1000064471.jpg", "/images/tidyTown/1000064473.jpg", "/images/tidyTown/1000064474.jpg", "/images/tidyTown/1000005867.jpg", "/images/tidyTown/1000005868.jpg"],
+  ["/images/tidyTown/1000064471.jpg", "/images/tidyTown/1000064473.jpg", "/images/tidyTown/1000064474.jpg", "/images/tidyTown/1000005867.jpg", "/images/tidyTown/1000005868.jpg", "/images/tidyTown/1000005893.jpg", "/images/tidyTown/1000005901.jpg"],
 ];
 
 function GalleryCarousel({ photos, delayMs }: { photos: string[]; delayMs: number }) {

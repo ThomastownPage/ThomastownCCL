@@ -16,8 +16,17 @@ const rooms = [
     capacity: "Up to 300 guests",
     features: ["Stage & lighting", "Sound system", "Tiered seating"],
     photos: [
-      "/images/rooms/concerteHall/1000064788.jpg",
-      "/images/rooms/concerteHall/1000064789.jpg",
+      { src: "/images/rooms/concerteHall/1000064788.jpg" },
+      { src: "/images/rooms/concerteHall/1000064789.jpg" },
+      { src: "/images/rooms/concerteHall/1000005871.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005872.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005889.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005895.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005903.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005913.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005914.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005918.jpg", contain: true },
+      { src: "/images/rooms/concerteHall/1000005923.jpg", contain: true },
     ],
   },
   {
@@ -42,6 +51,7 @@ const rooms = [
       "/images/rooms/mainHall/mainHall1.jpg",
       "/images/rooms/mainHall/mainHall2.jpg",
       "/images/rooms/mainHall/kitchen.jpg",
+      { src: "/images/rooms/mainHall/1000005907.jpg", contain: true },
     ],
   },
   {
@@ -160,18 +170,22 @@ export default function Facilities() {
                 {(room as any).photos ? (
                   <Carousel className="w-full" opts={{ loop: true }}>
                     <CarouselContent>
-                      {(room as any).photos.map((src: string, i: number) => (
-                        <CarouselItem key={i}>
-                          <img
-                            src={src}
-                            alt={`${room.name} photo ${i + 1}`}
-                            className="w-full h-80 object-cover"
-                            loading="lazy"
-                            decoding="async"
-                            style={(room as any).contrast ? { filter: `contrast(${(room as any).contrast}%)` } : undefined}
-                          />
-                        </CarouselItem>
-                      ))}
+                      {(room as any).photos.map((photo: string | { src: string; contain?: boolean }, i: number) => {
+                        const src = typeof photo === "string" ? photo : photo.src;
+                        const contain = typeof photo === "object" && photo.contain;
+                        return (
+                          <CarouselItem key={i}>
+                            <img
+                              src={src}
+                              alt={`${room.name} photo ${i + 1}`}
+                              className={`w-full h-80 ${contain ? "object-contain bg-gray-100" : "object-cover"}`}
+                              loading="lazy"
+                              decoding="async"
+                              style={(room as any).contrast ? { filter: `contrast(${(room as any).contrast}%)` } : undefined}
+                            />
+                          </CarouselItem>
+                        );
+                      })}
                     </CarouselContent>
                     <CarouselPrevious className="left-3 bg-white/80 hover:bg-white border-0 shadow" />
                     <CarouselNext className="right-3 bg-white/80 hover:bg-white border-0 shadow" />

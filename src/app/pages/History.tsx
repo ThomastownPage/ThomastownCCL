@@ -324,7 +324,7 @@ export default function History() {
                 adjoining the Concert Hall, estimated to cost around 60,000 pounds. The County
                 Council contributed 3,000 pounds. Parish residents raised a further 12,000 pounds.
                 By 1978, a loan from the Bank of Ireland — who also made a donation of 500 pounds —
-                secured the remaining finance.
+                secured the remaining finance.  
               </p>
               <p className="text-gray-600">
                 <strong>The new Hall — also known as the "Big Hall" — was officially opened on
@@ -404,7 +404,13 @@ export default function History() {
               </p>
             </div>
             <div>
-              <ImagePlaceholder label="Photo: Thomastown Community Centre Today" height="h-64" />
+              <img
+                src="/images/history/1000065212.jpg"
+                alt="Thomastown Community Centre Today"
+                className="w-full h-64 object-cover rounded-xl shadow"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
