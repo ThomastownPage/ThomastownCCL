@@ -82,6 +82,29 @@ let githubSha = null;
 let githubPushTimer = null;
 let pendingPushData = null;
 
+async function pullFromGitHub() {
+  if (!GITHUB_TOKEN || !GITHUB_REPO) return;
+  try {
+    const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/server/data.json`;
+    const headers = {
+      'Authorization': `Bearer ${GITHUB_TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+    };
+    const res = await fetch(`${apiUrl}?ref=${GITHUB_BRANCH}`, { headers });
+    const info = await res.json();
+    if (info.content && info.sha) {
+      const content = Buffer.from(info.content, 'base64').toString('utf-8');
+      writeFileSync(DATA_FILE, content);
+      githubSha = info.sha;
+      console.log('[github] data.json pulled from repo on startup');
+    } else {
+      console.warn('[github] startup pull: unexpected response', JSON.stringify(info));
+    }
+  } catch (e) {
+    console.error('[github] startup pull failed:', e.message);
+  }
+}
+
 async function pushToGitHub(data) {
   if (!GITHUB_TOKEN || !GITHUB_REPO) return;
   try {
@@ -247,8 +270,10 @@ if (existsSync(DIST_DIR)) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Data stored in: ${DATA_FILE}`);
-  if (existsSync(DIST_DIR)) console.log('Serving React build from dist/');
+pullFromGitHub().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Data stored in: ${DATA_FILE}`);
+    if (existsSync(DIST_DIR)) console.log('Serving React build from dist/');
+  });
 });

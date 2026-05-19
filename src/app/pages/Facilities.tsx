@@ -45,15 +45,17 @@ const rooms = [
     ],
   },
   {
-    name: "Paddlers' Training Gym",
+    name: "Private Paddlers' Training Gym",
     description:
       "A dedicated fitness space supporting training, conditioning, and water sports development for all levels.",
     capacity: "Up to 30 people",
-    features: ["Cardio equipment", "Strength machines", "Changing rooms"],
+    features: ["Cardio equipment", "Strength machines", "Changing rooms", "Private gym"],
     photos: [
       "/images/rooms/gym/1000064796.jpg",
-      "/images/rooms/gym/1000064797.jpg",
-      "/images/rooms/gym/1000064798.jpg",
+      "/images/rooms/gym/1000005864.jpg",
+      "/images/rooms/gym/1000005865.jpg",
+      "/images/rooms/gym/1000005866.jpg",
+      "/images/rooms/gym/1000005868.jpg",
     ],
   },
   {
@@ -76,8 +78,12 @@ const rooms = [
     capacity: "Up to 25 per room",
     features: ["Whiteboards", "Comfortable spaces", "Flexible layouts"],
     photos: [
-      "/images/rooms/classrooms/1000064790.jpg",
-      "/images/rooms/classrooms/1000064791.jpg",
+      "/images/rooms/classrooms/1000005861.jpg",
+      "/images/rooms/classrooms/1000005869.jpg",
+      "/images/rooms/classrooms/1000005870.jpg",
+      "/images/rooms/classrooms/1000065207.jpg",
+      "/images/rooms/classrooms/1000065209.jpg",
+      "/images/rooms/classrooms/1000065210.jpg",
     ],
   },
   {

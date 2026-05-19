@@ -30,7 +30,7 @@ export default function Concerts() {
       <section
         className="relative h-[400px] bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1591103797042-7748e75791be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBldmVudHMlMjBjb25jZXJ0JTIwZ2F0aGVyaW5nJTIwcGVvcGxlfGVufDF8fHx8MTc3ODY3MjExNXww&ixlib=rb-4.1.0&q=80&w=1080')`,
+          backgroundImage: `url('/images/playground/enterance.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/60 flex items-center">
