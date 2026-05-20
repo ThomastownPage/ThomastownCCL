@@ -58,8 +58,8 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 text-[var(--brand)] flex-shrink-0" />
                 <span className="text-sm">
-                  Thomastown Community River Trust<br />
-                  Thomastown Library, Marsh's St<br />
+                  Thomastown Community Centre<br />
+                  Summerhill<br />
                   Thomastown, Co. Kilkenny
                 </span>
               </li>

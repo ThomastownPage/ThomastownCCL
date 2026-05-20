@@ -150,8 +150,8 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg mb-1 text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      Thomastown Community River Trust<br />
-                      Thomastown Library, Marsh's St<br />
+                      Thomastown Community Centre<br />
+                      Summerhill<br />
                       Thomastown<br />
                       Co. Kilkenny
                     </p>
@@ -197,7 +197,7 @@ export default function Contact() {
                 </p>
                 <iframe
                   title="Thomastown Community Centre Map"
-                  src="https://www.google.com/maps?q=Thomastown+Library,+Marsh%27s+St,+Thomastown,+Co.+Kilkenny,+Ireland&output=embed"
+                  src="https://www.google.com/maps?q=Thomastown+Community+Centre,+Summerhill,+Thomastown,+Co.+Kilkenny,+Ireland&output=embed"
                   className="w-full h-64 rounded-lg border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
