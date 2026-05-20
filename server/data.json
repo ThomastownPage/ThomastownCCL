@@ -1,20 +1,6 @@
 {
   "concerts": [
     {
-      "title": "Music in Kilkenny",
-      "artist": "",
-      "date": "January - May, 2026",
-      "time": "",
-      "price": "",
-      "image": "",
-      "description": "",
-      "isPast": true,
-      "flyers": [
-        "/images/flyers/musicInKilkenny2026.jpg"
-      ],
-      "id": "1778842559558"
-    },
-    {
       "title": "The Weir",
       "artist": "",
       "date": "March, 12 - 14 & 19 - 21, 2026",
@@ -27,6 +13,20 @@
         "/images/flyers/Weir.png"
       ],
       "id": "1778842528705"
+    },
+    {
+      "title": "Music in Kilkenny",
+      "artist": "",
+      "date": "January - May, 2026",
+      "time": "",
+      "price": "",
+      "image": "",
+      "description": "",
+      "isPast": true,
+      "flyers": [
+        "/images/flyers/musicInKilkenny2026.jpg"
+      ],
+      "id": "1778842559558"
     },
     {
       "title": "The Forgotten Voices of Worrkhouse Women",
