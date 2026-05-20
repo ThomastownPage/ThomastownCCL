@@ -46,7 +46,7 @@ const rooms = [
       "A versatile space available for meetings, workshops, classes, and community events of all kinds.",
     capacity: "Up to 80 guests",
     features: ["Projector & screen", "Flexible seating", "Kitchenette access"],
-    contrast: 75,
+    
     photos: [
       "/images/rooms/mainHall/1779263088431.jpg",
       "/images/rooms/mainHall/mainHall1.jpg",
@@ -76,7 +76,7 @@ const rooms = [
       "Outdoor and indoor courts available for basketball, tennis, and a range of local sporting activities.",
     capacity: "Multiple courts",
     features: ["Basketball court", "Tennis court", "Outdoor gym"],
-    contrast: 75,
+    
     photos: [
       "/images/playground/sport/1000064374.jpg",
       "/images/playground/sport/1000064375.jpg",
@@ -104,8 +104,15 @@ const rooms = [
       "A quiet space to read, study, and explore our local collection — open to all members of the community.",
     capacity: "Open access",
     features: ["Local history archive", "Reading area", "Study desks"],
+    
     photos: [
       "/images/playground/library.jpg",
+      "/images/rooms/library/1000065300.jpg",
+      "/images/rooms/library/1000065301.jpg",
+      "/images/rooms/library/1000065302.jpg",
+      "/images/rooms/library/1000065303.jpg",
+      "/images/rooms/library/1000065304.jpg",
+      "/images/rooms/library/1000065305.jpg",
     ],
   },
   {
@@ -114,7 +121,7 @@ const rooms = [
       "A relaxed social space where people of all ages can unwind, connect, and enjoy time together.",
     capacity: "Up to 50 people",
     features: ["Lounge seating", "Games & activities", "Community hub"],
-    contrast: 75,
+    
     photos: [
       "/images/playground/chillZone/chillZone.jpg",
       "/images/playground/chillZone/1000064372.jpg",

@@ -4,7 +4,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const IMAGES_DIR = path.join(__dirname, "..", "src", "public", "images");
+const dirArg = process.argv.find((a) => a.startsWith("--dir="))?.slice(6);
+const IMAGES_DIR = dirArg
+  ? path.resolve(dirArg)
+  : path.join(__dirname, "..", "src", "public", "images");
 
 const MAX_DIMENSION = 1600;
 const JPEG_QUALITY = 72;
