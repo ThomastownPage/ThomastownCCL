@@ -263,12 +263,12 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl text-gray-900">Find Us</h2>
             <p className="text-gray-600 mt-2">
-              Thomastown Library, Marsh's St, Thomastown, Co. Kilkenny
+              Thomastown Community Centre, Summerhill, Thomastown, Co. Kilkenny
             </p>
           </div>
           <iframe
             title="Thomastown Community Centre Map"
-            src="https://www.google.com/maps?q=Thomastown+Library,+Marsh%27s+St,+Thomastown,+Co.+Kilkenny,+Ireland&output=embed"
+            src="https://www.google.com/maps?q=Thomastown+Community+Centre,+Summerhill,+Thomastown,+Co.+Kilkenny,+Ireland&output=embed"
             className="w-full h-80 rounded-xl border-0 shadow-md"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
