@@ -48,10 +48,12 @@ const rooms = [
     features: ["Projector & screen", "Flexible seating", "Kitchenette access"],
     contrast: 75,
     photos: [
+      "/images/rooms/mainHall/1779263088431.jpg",
       "/images/rooms/mainHall/mainHall1.jpg",
       "/images/rooms/mainHall/mainHall2.jpg",
       "/images/rooms/mainHall/kitchen.jpg",
       { src: "/images/rooms/mainHall/1000005907.jpg", contain: true },
+      "/images/rooms/mainHall/1779263088444.jpg",
     ],
   },
   {

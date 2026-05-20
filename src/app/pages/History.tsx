@@ -301,7 +301,7 @@ export default function History() {
               <img
                 src="/images/history/building1979.jpg"
                 alt="New Community Centre — Opening 1979"
-                className="w-full h-116 object-cover rounded-xl shadow"
+                className="w-full h-full object-cover rounded-xl shadow"
                 loading="lazy"
                 decoding="async"
               />
