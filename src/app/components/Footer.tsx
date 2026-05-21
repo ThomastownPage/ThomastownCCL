@@ -46,7 +46,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/facilities" className="text-sm hover:text-[var(--brand)] transition-colors">
-                  Facilities
+                  Rooms / Facilities
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className="text-sm hover:text-[var(--brand)] transition-colors">
+                  News
+                </Link>
+              </li>
+              <li>
+                <Link to="/tidytowns" className="text-sm hover:text-[var(--brand)] transition-colors">
+                  TidyTowns
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm hover:text-[var(--brand)] transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -58,9 +73,11 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 text-[var(--brand)] flex-shrink-0" />
                 <span className="text-sm">
-                  Thomastown Community Centre<br />
-                  Summerhill<br />
-                  Thomastown, Co. Kilkenny
+                  Thomastown Community Centre Ltd<br />
+                  Marsh's Street<br />
+                  Thomastown<br />
+                  Co. Kilkenny<br />
+                  R95PX56
                 </span>
               </li>
               <li className="flex items-center space-x-2">

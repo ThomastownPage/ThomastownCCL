@@ -150,10 +150,11 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg mb-1 text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      Thomastown Community Centre<br />
-                      Summerhill<br />
+                      Thomastown Community Centre Ltd<br />
+                     Marsh's Street<br />
                       Thomastown<br />
-                      Co. Kilkenny
+                      Co. Kilkenny<br />
+                       R95PX56
                     </p>
                   </div>
                 </div>

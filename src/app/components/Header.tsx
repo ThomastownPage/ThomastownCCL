@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import ThemeSwitch from "./ThemeSwitch";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "History", path: "/history" },
@@ -53,8 +52,7 @@ export default function Header() {
             </div> */}
           </nav>
 
-          <div className="flex items-center gap-3 lg:hidden"> 
-            <ThemeSwitch />
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg hover:bg-gray-100"

@@ -88,12 +88,12 @@ const biodiversityPoints = [
 ];
 
 const galleryData = [
-  ["/images/tidyTown/1000064449.jpg", "/images/tidyTown/1000064450.jpg", "/images/tidyTown/1000064451.jpg"],
+  ["/images/tidyTown/1000064449.jpg", "/images/tidyTown/1000064450.jpg", "/images/tidyTown/1000064451.jpg", "/images/tidyTown/1000065449.jpg"],
   ["/images/tidyTown/1000064453.jpg", "/images/tidyTown/1000064454.jpg", "/images/tidyTown/1000064455.jpg"],
-  ["/images/tidyTown/1000064458.jpg", "/images/tidyTown/1000064459.jpg", "/images/tidyTown/1000064461.jpg"],
-  ["/images/tidyTown/1000064463.jpg", "/images/tidyTown/1000064464.jpg", "/images/tidyTown/1000064465.jpg"],
-  ["/images/tidyTown/1000064466.jpg", "/images/tidyTown/1000064468.jpg", "/images/tidyTown/1000064470.jpg"],
-  ["/images/tidyTown/1000064471.jpg", "/images/tidyTown/1000064473.jpg", "/images/tidyTown/1000064474.jpg", "/images/tidyTown/1000005867.jpg", "/images/tidyTown/1000005868.jpg", "/images/tidyTown/1000005893.jpg", "/images/tidyTown/1000005901.jpg"],
+  ["/images/tidyTown/1000064458.jpg", "/images/tidyTown/1000064459.jpg", "/images/tidyTown/1000064461.jpg", "/images/tidyTown/1000065451.jpg"],
+  ["/images/tidyTown/1000064463.jpg", "/images/tidyTown/1000064464.jpg", "/images/tidyTown/1000064465.jpg", "/images/tidyTown/1000065453.jpg"],
+  ["/images/tidyTown/1000064466.jpg", "/images/tidyTown/1000064468.jpg", "/images/tidyTown/1000064470.jpg", "/images/tidyTown/1000065455.jpg"],
+  ["/images/tidyTown/1000064471.jpg", "/images/tidyTown/1000064473.jpg", "/images/tidyTown/1000064474.jpg", "/images/tidyTown/1000005867.jpg", "/images/tidyTown/1000005868.jpg", "/images/tidyTown/1000005893.jpg", "/images/tidyTown/1000005901.jpg", "/images/tidyTown/1000065458.jpg", "/images/tidyTown/1000065459.jpg"],
 ];
 
 function GalleryCarousel({ photos, delayMs }: { photos: string[]; delayMs: number }) {
@@ -144,7 +144,7 @@ export default function TidyTowns() {
       <section
         className="relative h-[480px] bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1501854140801-50d01698950b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMG5hdHVyZSUyMGlybGFuZCUyMGNvdW50cnlzaWRlfGVufDF8fHx8MTc3ODY3MjExNXww&ixlib=rb-4.1.0&q=80&w=1080')`,
+          backgroundImage: `url('/images/tidyTown/1000065458.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/55 flex items-center">
@@ -202,7 +202,7 @@ export default function TidyTowns() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxpcmlzaCUyMHRvd24lMjBncmVlbiUyMGNvbW11bml0eXxlbnwxfHx8fDE3Nzg2NzIxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/tidyTown/1000064471.jpg"
                 alt="Thomastown community"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
                 loading="lazy"
@@ -303,7 +303,7 @@ export default function TidyTowns() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2xsaW5hdG9yJTIwZmxvd2VycyUyMGdhcmRlbnxlbnwxfHx8fDE3Nzg2NzIxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/tidyTown/1000064468.jpg"
                 alt="Biodiversity and nature"
                 className="w-full h-[420px] object-cover rounded-xl shadow-xl"
                 loading="lazy"
