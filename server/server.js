@@ -153,10 +153,70 @@ function scheduleGitHubPush(data) {
   }, 1500);
 }
 
+async function pushImageToGitHub(filename, buffer) {
+  if (!GITHUB_TOKEN || !GITHUB_REPO) return;
+  try {
+    const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/server/uploads/${filename}`;
+    const headers = {
+      'Authorization': `Bearer ${GITHUB_TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+    };
+    let sha;
+    const check = await fetch(`${apiUrl}?ref=${GITHUB_BRANCH}`, { headers });
+    if (check.ok) {
+      const info = await check.json();
+      sha = info.sha;
+    }
+    const body = { message: `Upload: ${filename}`, content: buffer.toString('base64'), branch: GITHUB_BRANCH };
+    if (sha) body.sha = sha;
+    const res = await fetch(apiUrl, { method: 'PUT', headers, body: JSON.stringify(body) });
+    const result = await res.json();
+    if (result.content?.sha) {
+      console.log(`[github] image pushed: ${filename}`);
+    } else {
+      console.error('[github] image push failed:', JSON.stringify(result));
+    }
+  } catch (e) {
+    console.error('[github] image push failed:', e.message);
+  }
+}
+
+async function pullUploadsFromGitHub() {
+  if (!GITHUB_TOKEN || !GITHUB_REPO) return;
+  try {
+    const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/server/uploads`;
+    const headers = {
+      'Authorization': `Bearer ${GITHUB_TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+    };
+    const res = await fetch(`${apiUrl}?ref=${GITHUB_BRANCH}`, { headers });
+    if (!res.ok) return;
+    const files = await res.json();
+    if (!Array.isArray(files)) return;
+    let pulled = 0;
+    for (const file of files) {
+      const localPath = join(UPLOADS_DIR, file.name);
+      if (existsSync(localPath)) continue;
+      const dl = await fetch(file.download_url);
+      if (!dl.ok) continue;
+      const buf = Buffer.from(await dl.arrayBuffer());
+      writeFileSync(localPath, buf);
+      pulled++;
+    }
+    if (pulled > 0) console.log(`[github] pulled ${pulled} upload(s) from repo`);
+  } catch (e) {
+    console.error('[github] uploads pull failed:', e.message);
+  }
+}
+
 // ── File Upload ──────────────────────────────────────────────────────────────
 app.post('/api/upload', requireAuth, upload.single('file'), (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'No file received' });
-  res.json({ url: `/uploads/${req.file.filename}` });
+  const url = `/uploads/${req.file.filename}`;
+  const buffer = readFileSync(req.file.path);
+  pushImageToGitHub(req.file.filename, buffer).catch(() => {});
+  res.json({ url });
 });
 
 // ── Concerts ─────────────────────────────────────────────────────────────────
@@ -270,10 +330,12 @@ if (existsSync(DIST_DIR)) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
-pullFromGitHub().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-    console.log(`Data stored in: ${DATA_FILE}`);
-    if (existsSync(DIST_DIR)) console.log('Serving React build from dist/');
+pullFromGitHub()
+  .then(() => pullUploadsFromGitHub())
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Data stored in: ${DATA_FILE}`);
+      if (existsSync(DIST_DIR)) console.log('Serving React build from dist/');
+    });
   });
-});

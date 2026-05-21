@@ -221,7 +221,7 @@ Same pattern: `GET/POST/PUT/PUT:id/DELETE` at `/api/news`.
 ### File Upload
 
 `POST /api/upload` (Auth required) — multipart `file` field, max 20 MB.  
-Returns `{ url: "/uploads/<filename>" }`. Uploaded files are stored in `server/uploads/`.
+Returns `{ url: "/uploads/<filename>" }`. Uploaded files are stored locally in `server/uploads/` **and** pushed to the GitHub repository at `server/uploads/<filename>` (if `GITHUB_TOKEN` is configured). On server startup, any images present in the repo but missing locally are automatically downloaded, so uploads survive redeployments.
 
 ---
 
