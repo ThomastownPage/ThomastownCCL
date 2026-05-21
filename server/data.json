@@ -1,20 +1,6 @@
 {
   "concerts": [
     {
-      "title": "asd",
-      "artist": "asd",
-      "date": "asd",
-      "time": "asd",
-      "price": "",
-      "image": "/uploads/1779360883366-154236.png",
-      "description": "",
-      "isPast": false,
-      "eventType": "Concert",
-      "flyers": [],
-      "address": "asd",
-      "id": "1779360886070"
-    },
-    {
       "title": "Last train from Holyhead",
       "artist": "By Bernard Field",
       "date": "06, June, 2026",
