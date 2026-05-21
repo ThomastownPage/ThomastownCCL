@@ -13,7 +13,7 @@ const rooms = [
     name: "Main Concert Hall",
     description:
       "Our historic main hall is a versatile space suitable for concerts, theatre productions, film screenings, community events, presentations, and large gatherings. Equipped with modern facilities while maintaining its historic character, the hall can adapt to a wide range of events and activities.",
-    capacity: "Up to 300 guests",
+    capacity: "Up to 150 guests",
     features: ["Stage & lighting", "Sound system", "Tiered seating"],
     photos: [
       { src: "/images/rooms/concerteHall/1000064788.jpg" },
@@ -44,7 +44,7 @@ const rooms = [
     name: "Concours Area",
     description:
       "A versatile space available for meetings, workshops, classes, and community events of all kinds.",
-    capacity: "Up to 80 guests",
+    capacity: "Up to 50 guests",
     features: ["Projector & screen", "Flexible seating", "Kitchenette access"],
     
     photos: [
@@ -119,7 +119,7 @@ const rooms = [
     name: "Chill Zone",
     description:
       "A relaxed social space where people of all ages can unwind, connect, and enjoy time together.",
-    capacity: "Up to 50 people",
+    capacity: "Up to 30 people",
     features: ["Lounge seating", "Games & activities", "Community hub"],
     
     photos: [

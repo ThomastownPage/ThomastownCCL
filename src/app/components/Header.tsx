@@ -53,7 +53,7 @@ export default function Header() {
             </div> */}
           </nav>
 
-          <div className="flex items-center gap-3 lg:hidden">
+          <div className="flex items-center gap-3 lg:hidden"> 
             <ThemeSwitch />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
